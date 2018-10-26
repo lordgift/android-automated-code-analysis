@@ -6,5 +6,7 @@ local.properties
 */build
 /captures
 .externalNativeBuild
-/gradle
+/gradle/wrapper/gradle-wrapper.jar
 gradlew*
+**/.project
+**/.classpath
