@@ -17,10 +17,6 @@ RUN unzip -o sdk-tools.zip -d $ANDROID_HOME
 RUN rm sdk-tools.zip
 
 # Update and install using sdkmanager 
-# RUN $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools"
-# RUN $ANDROID_HOME/tools/bin/sdkmanager "build-tools;28.0.0" "build-tools;27.0.3"
-# RUN $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-28" "platforms;android-27"
-# RUN $ANDROID_HOME/tools/bin/sdkmanager "extras;android;m2repository" "extras;google;m2repository"
 RUN yes | sdkmanager "platform-tools" "platforms;android-28"
 
 
