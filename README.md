@@ -12,8 +12,8 @@ Docker Compose configured to create 2 containers
 1. Jenkins (localhost:8080)
 2. SonarQube (localhost:9000 or sonar:9000)
 
-Jenkins' container will automatic prepare ANDROID_SDK follow with [Dockerfile](./Dockerfile) ***"YEAH!! It ready to build Android"***
-Jenkins' container know http://sonar:9000 is http://157.179.1.1:9000 that is static IP configured
++ Jenkins' container will automatic prepare ANDROID_SDK follow with [Dockerfile](./Dockerfile) ***"YEAH!! It ready to build Android"***
++ Jenkins' container know http://sonar:9000 is http://157.179.1.1:9000 that is static IP configured
 
 ----------
 
