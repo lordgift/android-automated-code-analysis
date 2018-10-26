@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+  sonarqube:
+    build: 
+      context: .
+      dockerfile: sonarqube.Dockerfile
+    ports:
+      - 9000:9000
+      - 9092:9092
+    networks:
+      testing_net:
+          ipv4_address: 157.179.1.1
+  jenkins:
+    build:
+      context: .
+      dockerfile: jenkins.Dockerfile
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - type: bind
+        source: ./
+        target: /project
+    extra_hosts:
+      - "sonar:157.179.1.1"
+    depends_on:
+      - sonarqube
+    networks:
+      testing_net:
+          ipv4_address: 157.179.1.2
+
+networks:
+    testing_net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 157.179.0.0/16
