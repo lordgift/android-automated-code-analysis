@@ -20,5 +20,5 @@ RUN rm sdk-tools.zip
 RUN yes | sdkmanager "platform-tools" "platforms;android-28"
 
 
-ARG jenkins_defualt_port=8080
-EXPOSE ${jenkins_defualt_port}
+ARG jenkins_default_port=8080
+EXPOSE ${jenkins_default_port}
